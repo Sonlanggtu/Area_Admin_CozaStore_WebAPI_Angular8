@@ -1,0 +1,31 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule} from '@angular/router';
+import { AppComponent } from './app.component';
+import { HttpModule } from '@angular/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http'
+import { appRoutes } from './app.routes';
+import {AuthGuard} from '../app/core/guards/auth.guard';
+import {DataService} from '../app/core/services/data.service';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap';
+import { TreeDraggedElement } from 'angular-tree-component';
+import { SimpleTinyModule } from './shared/simple-tiny/simple-tiny.module';
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    HttpClientModule,
+    SimpleTinyModule,
+    TooltipModule.forRoot(),
+    ModalModule.forRoot(),
+    RouterModule.forRoot(appRoutes,{useHash: true}),
+    
+  ],
+  providers: [AuthGuard,HttpClient, DataService,TreeDraggedElement],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
