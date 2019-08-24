@@ -55,7 +55,7 @@ export class OrderDetailComponent implements OnInit {
   }
 
   public goBack() {
-    this._utilityService.navigate('/main/order/index');
+    this._utilityService.navigate('/admin/main/order/index');
   }
 
   public saveChanges(valid: boolean) {

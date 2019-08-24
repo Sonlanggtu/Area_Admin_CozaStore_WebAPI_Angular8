@@ -5,7 +5,7 @@ import { NotificationService } from '../../core/services/notification.service';
 import { UtilityService } from '../../core/services/utility.service';
 import { MessageConstants } from '../../core/common/message.constants';
 import { ModalDirective } from 'ngx-bootstrap/modal';
-import { DataService } from 'src/app/core/services/data.service';
+import { DataService } from '../../../../app/adminpage/core/services/data.service';
 @Component({
   selector: 'app-function',
   templateUrl: './function.component.html',

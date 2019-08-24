@@ -56,7 +56,7 @@ export class OrderAddComponent implements OnInit {
     }, error => this._dataService.handleError(error));
   }
   public goBack() {
-    this.utilityService.navigate('/main/order/index');
+    this.utilityService.navigate('/admin/main/order/index');
   }
 
 

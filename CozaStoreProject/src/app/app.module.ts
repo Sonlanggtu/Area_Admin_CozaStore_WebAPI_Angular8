@@ -5,12 +5,12 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import {HttpClient, HttpClientModule} from '@angular/common/http'
 import { appRoutes } from './app.routes';
-import {AuthGuard} from '../app/core/guards/auth.guard';
-import {DataService} from '../app/core/services/data.service';
+import {AuthGuard} from '../app/adminpage/core/guards/auth.guard';
+import {DataService} from '../app/adminpage/core/services/data.service';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap';
 import { TreeDraggedElement } from 'angular-tree-component';
-import { SimpleTinyModule } from './shared/simple-tiny/simple-tiny.module';
+import { SimpleTinyModule } from './adminpage/shared/simple-tiny/simple-tiny.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -22,7 +22,7 @@ import { SimpleTinyModule } from './shared/simple-tiny/simple-tiny.module';
     SimpleTinyModule,
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
-    RouterModule.forRoot(appRoutes,{useHash: true}),
+    RouterModule.forRoot(appRoutes),
     
   ],
   providers: [AuthGuard,HttpClient, DataService,TreeDraggedElement],
