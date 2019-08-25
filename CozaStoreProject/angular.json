@@ -35,7 +35,11 @@
               "./node_modules/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css",
               "./node_modules/animate.css/animate.min.css",
               "./src/assets/css/custom.css",
+              "./src/assets/website/css/main.css",
+              "./src/assets/website/css/util.css",
               "src/styles.css"
+              
+              
 
             ],
             "scripts": [

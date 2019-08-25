@@ -4,8 +4,7 @@ import { HomepageComponent } from './homepage.component';
 import {Routes, RouterModule} from '@angular/router'
 
 const homepageRoutes: Routes = [
-  { path: '', redirectTo: 'index', pathMatch: 'full' },
-  { path: 'index', component: HomepageComponent },
+  { path: '', component: HomepageComponent },
 ]
 @NgModule({
   declarations: [HomepageComponent],

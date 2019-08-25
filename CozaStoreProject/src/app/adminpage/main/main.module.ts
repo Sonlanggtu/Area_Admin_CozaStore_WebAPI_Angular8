@@ -9,10 +9,12 @@ import {SidebarMenuComponent} from '../shared/sidebar-menu/sidebar-menu.componen
 import {TopMenuComponent} from '../shared/top-menu/top-menu.component'
 import {SignalrService} from '../core/services/signalr.service';
 import { RevenueModule } from './report/revenue/revenue.module';
+import {ConfirmPasswordValidate} from '../shared/validate/confirm_password.directive';
 @NgModule({
   declarations: [MainComponent,
     SidebarMenuComponent,
-    TopMenuComponent
+    TopMenuComponent,
+    ConfirmPasswordValidate
   ],
   imports: [
     CommonModule,

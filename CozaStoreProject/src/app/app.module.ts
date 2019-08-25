@@ -11,9 +11,11 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap';
 import { TreeDraggedElement } from 'angular-tree-component';
 import { SimpleTinyModule } from './adminpage/shared/simple-tiny/simple-tiny.module';
+import { PageComponent } from './website/page/page.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,

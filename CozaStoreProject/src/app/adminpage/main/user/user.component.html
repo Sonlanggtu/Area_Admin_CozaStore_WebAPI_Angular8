@@ -120,11 +120,16 @@
           <div class="form-group" *ngIf="!entity.Id">
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Xác nhận mật khẩu</label>
             <div class="col-md-9 col-sm-9 col-xs-12">
-              <input type="password" #confirmpassword="ngModel" [(ngModel)]="entity.ConfirmPassword" required
-                validateEqual="password" minlength="6" name="confirmpassword" class="form-control">
+              <input type="password" #confirmpassword="ngModel" appConfirmEqualValidator="password" 
+              [(ngModel)]="entity.ConfirmPassword" required  minlength="6"
+               name="confirmpassword" class="form-control">
               <small [hidden]="confirmpassword.valid || (confirmpassword.pristine && !addEditForm.submitted)"
                 class="text-danger">
                 Xác nhận mật khẩu sai
+              </small>
+              <small class="help-block" *ngIf="confirmpassword.touch && confirmpassword.errors?.notEqual &&
+              !confirmpassword.errors?.required">
+                    Mật khẩu không khớp
               </small>
             </div>
           </div>
