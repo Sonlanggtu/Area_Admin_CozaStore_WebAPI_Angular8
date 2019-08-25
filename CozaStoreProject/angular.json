@@ -36,7 +36,6 @@
               "./node_modules/animate.css/animate.min.css",
               "./src/assets/css/custom.css",
               "src/styles.css"
-
             ],
             "scripts": [
               "./node_modules/gentelella/vendors/jquery/dist/jquery.min.js",
